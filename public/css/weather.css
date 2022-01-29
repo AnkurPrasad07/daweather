@@ -1,0 +1,274 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+:root{
+    --primary-color: #B1FFF1;
+    --bg-color: #2C2D2E;
+
+    --title-color: #FFFFFF;
+    --desc-color: #A5A5A5;
+    
+    --in_active-link-color: #dfdfdf;
+
+
+    --br_big: 20px;
+    --br_small: 5px;
+}
+
+.text_weather{
+    margin-top: 6%;
+}
+
+.text_weather .title{
+    text-align: center;
+    position: relative;
+    z-index: -1;
+}
+
+.text_weather .title::before{
+    content: "Search your city";
+    position: absolute;
+    bottom: 20%;
+    font-size: 2em;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0.05);
+    right: 20%;
+}
+
+.weather{
+    margin-top: 5rem;
+}
+
+
+.weather .city-input #city-name{
+    outline: none;
+    border: none;
+
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
+
+    width: 39rem;
+    height: 6.2rem;
+    padding: 2rem;
+    font-size: 2rem;
+    font-family: poppins, sans-serif;
+    font-weight: 600;
+    background-color:  #494A4B;
+    color: white;
+}
+
+.weather .city-input .flex-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather .city-input .cityBtn{
+    height: 6.2rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    padding-right: 25px ;
+    padding-left: 25px ;
+    background-color: #C9FEF4;
+}
+
+
+
+.box_weather .flex_weather{
+    width: 45rem;
+    background-color:  #444546 ;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 3rem;
+    border-top-left-radius: var(--br_big);
+    border-top-right-radius: var(--br_big);
+    
+    display: flex;
+    align-items: baseline;
+}
+
+.box_weather .left_box .tag{
+    padding: 5px 15px;
+    background-color: #656668;
+    font-size: 1.4rem;
+    border-radius: var(--br_small);
+    color: #E1E1E1;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.left_box .weather_icon{
+    display: block;
+    width: 15rem;
+    margin-top: 3rem;
+}
+
+.right_box {
+    margin-left: 10%;
+}
+
+.right_box .city{
+    color: rgb(228, 228, 228);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.right_box .temp{
+    font-size: 5rem;
+    color: white;
+    margin-top: -10px;
+}
+
+.right_box .mood{
+    font-size: 1.8rem;
+    margin-top: -10px;
+    color: #E2E2E2;
+}
+
+.more_info{
+    margin-top: 2rem ;
+    margin-bottom: 2rem ;
+}
+
+.more_info .info{
+    display: flex;
+    align-items: center;
+}
+
+.more_info .info img{
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+.more_info .info p{
+    color: white;
+    font-size: 1.8rem;
+}
+
+.sunrise_sunset{
+    height: 12.5rem;
+    width: 45rem;
+    background-color: #515254;
+    margin: auto;
+    border-bottom-left-radius: var(--br_big);
+    border-bottom-right-radius: var(--br_big);
+}
+
+
+
+.box_weather{
+    display: none;
+}
+
+.city-input span{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #FFA1A1;
+    margin-left: 35%;
+}
+
+.watermark{
+    display: block;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.watermark span{
+    color: white;
+    font-weight: 500;
+}
+
+footer{
+    margin-top: auto;
+    
+}
+
+@media screen and (max-width: 726px){
+    .text_weather .title::before{
+        display: none;
+    }
+
+    .weather{
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 427px){
+    .weather .city-input #city-name{
+        width: 25rem;
+        height: 5rem;
+    }
+
+    .weather .city-input .cityBtn{
+        padding: 16px;
+        height: 5rem;
+    }
+
+    .box_weather .flex_weather{
+        width: 30rem;
+        flex-direction: column;
+    }
+
+    .left_box {
+        width: 100%;
+    }
+
+    .left_box .weather_icon{
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .right_box {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .right_box .city{
+        text-align: center;
+    }
+
+    .right_box .temp{
+        text-align: center;
+    }
+
+    .right_box .mood{
+        text-align: center;
+    }
+
+    
+    
+
+    .more_info{
+        background-color:#515254;
+        padding: 2rem;
+        border-radius: var(--br_small);  
+        border: 1px solid rgba(255, 255, 255, 0.3);      
+    }
+    .weather .city-input #city-name{
+        font-size: 1.6rem;
+    }
+
+    .sunrise_sunset{
+        width: 30rem;
+    }
+    
+}
+
+@media screen and (max-width: 341px){
+    .weather .city-input #city-name{
+        width: 18rem;
+    }
+}
+

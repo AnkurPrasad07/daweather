@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Weather</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="asset/logo_app.svg" alt="logo">
+        </div>
+    
+        <div class="links">
+            <ul>
+                <li><a href="/" >Home</a></li>
+                <li><a href="/weather">Weather</a></li>
+                <li class="active"><a href="/about" class="active_link">About me</a></li>
+            </ul>
+        </div>
+
+        <div class="hamburger">
+            <img src="asset/home/hamburger.svg" alt="">
+        </div>
+
+        <div class="overlay">
+            <ul>
+                <li><a href="/" >Home</a></li>
+                <li><a href="/weather">Weather</a></li>
+                <li class="active"><a href="/about" class="active_link">About me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+   
+
+    <section class="hero">
+        <div class="left">
+            <h1 class="title"><span>This is Ankur, who </span> <span>who makes Businesses</span> <span>on the Web!</span></h1>
+
+            <p class="desc">Lörem ipsum nåktiga nemårtad astrotik plakägon. Hemiskapet stenoliga i kanade geligt nyl. Europäns jåjåre </p>
+
+            {{>btn}}
+
+        </div>
+
+        <div class="right">
+            <img src="asset/about/image-left.svg" alt="weather-img" class="featured-img">
+            <img src="asset/about/arrow.svg" alt="arrow" class="arrow">
+            <div class="box-right_about"></div>
+        </div>
+    </section>
+
+
+
+    <!-- javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

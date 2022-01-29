@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Weather</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="asset/logo_app.svg" alt="logo">
+        </div>
+
+        <div class="links">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/weather" class="active_link">Weather</a></li>
+                <li><a href="/about">About me</a></li>
+            </ul>
+        </div>
+
+        <div class="hamburger">
+            <img src="asset/home/hamburger.svg" alt="">
+        </div>
+
+         <div class="overlay">
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li  class="active"><a href="/weather"  class="active_link">Weather</a></li>
+                <li><a href="/about">About me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div class="text_weather">
+            <h1 class="title">Search your city</h1>
+        </div>
+
+        <div class="weather">
+
+            <div class="city-input">
+                <div class="flex-input">
+                    <input type="text" id="city-name">
+                    <button class="cityBtn"><img src="asset/weather/tick.svg" alt="tick"></button>
+                </div>
+                <span></span>
+            </div>
+
+            <div class="box_weather">
+                <div class="flex_weather">
+                    <div class="left_box">
+                        <span class="tag day"></span>
+                        <span class="tag time"></span>
+                        <img src="asset/weather_icon/cloudy.svg" alt="weather_icon" class="weather_icon">
+                    </div>
+
+                    <div class="right_box">
+                        <h2 class="city"></h2>
+                        <h1 class="temp"></h1>
+                        <p class="mood"></p>
+                        <div class="more_info">
+                            <div class="info">
+                                <img src="asset/weather/humidity.svg" alt="">
+                                <p class="humidity"></p>
+                            </div>
+
+                            <div class="info">
+                                <img src="asset/weather/wind.svg" alt="">
+                                <p class="pressure"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sunrise_sunset"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p class="watermark">Designed and Developed by <span>Ankur</span> - UI UX Designer</p>
+    </footer>
+
+
+
+
+    <!-- javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        const day_name = document.querySelector(".day")
+        const time_name = document.querySelector(".time")
+
+
+        const getCurrentDay = ()=>{
+            let weekDay = new Array(7)
+            weekDay[0] = "Sunday"
+            weekDay[1] = "Monday"
+            weekDay[2] = "Tuesday"
+            weekDay[3] = "Wednesday"
+            weekDay[4] = "Thursday"
+            weekDay[5] = "Friday"
+            weekDay[6] = "Saturday"
+
+            let currentTime = new Date();
+            let day = weekDay[currentTime.getDay()]
+
+            day_name.innerText = day
+        }
+
+        getCurrentDay()
+
+
+    </script>
+</body>
+
+</html>

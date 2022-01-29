@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800;1,900&family=Roboto:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* defining the colors and size */
+:root{
+    --primary-color: #B1FFF1;
+    --bg-color: #2C2D2E;
+
+    --title-color: #FFFFFF;
+    --desc-color: #A5A5A5;
+    
+    --in_active-link-color: #dfdfdf;
+
+
+    --br_big: 20px;
+    --br_small: 5px;
+}
+
+
+/* some basic styles */
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+/* re-defining our basic CSS */
+
+
+li{
+    list-style: none;
+}
+
+ a{
+    text-decoration: none;
+    color: var(--in_active-link-color);
+    font-weight: 500;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+
+    font-family: 'poppins', sans-serif;
+    background-color: var(--primary-color);
+    border-radius: var(--br_small);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--bg-color);
+    transition: ease all 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button p{
+    margin-right: 1.5rem;
+}
+
+
+button:hover{
+    background-color: #a7f0e2;
+}
+
+.title span{
+    display: block;
+}
+
+
+/* designing the navbar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(10px);
+}
+
+.logo img{
+    width: 10rem;
+}
+
+.links ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links ul li{
+    margin-left: 40px;
+    font-size: 1.8rem;
+}
+
+.links ul li .active_link{
+    color: white;
+}
+
+.links ul li a:hover{
+    color: white;
+}
+.links ul .active{
+    position: relative;
+}
+
+.links ul .active ::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width:100%;
+    height: 5px;
+    border-top-left-radius:var(--br_small);
+    border-top-right-radius: var(--br_small);
+    background-color: var(--primary-color);
+    z-index: -1;
+
+}
+
+.links ul li a:hover{
+    color: white;
+}
+
+
+
+/* hero section starts */
+.hero{
+    margin: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0rem;
+}
+
+
+.right .featured-img{
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+
+.title{
+    font-size: 5.5rem;
+    line-height: 100.5%;
+    color: var(--title-color);
+}
+
+.desc{
+    width: 70%;
+    line-height: 152.5%;
+    color: var(--desc-color);
+    font-size: 1.8rem;
+    margin-top: 1.5rem ;
+    margin-bottom: 1.5rem ;
+}
+
+.circle_bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.overlay{
+    width: 80%;
+    position: fixed;
+    background-color:#272729 ;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+}
+
+.overlay ul {
+    margin-top: 10rem;
+}
+
+
+.overlay ul li{
+    padding: 2.5rem 5rem;
+    background-color: rgba(255, 255, 255, 0.10);
+    margin: 2rem 1rem;
+    border-radius: var(--br_big);
+    cursor: pointer;
+}
+
+
+.overlay ul li a{
+    font-size: 2.2rem;
+    font-weight: 600; 
+    color: rgb(224, 224, 224);
+}
+
+.overlay ul .active{
+    background-color:rgba(255, 255, 255, 0.15) ;
+}
+
+.overlay ul .active .active_link{
+    color: white;
+}
+
+.overlay ul li:hover{
+    background-color:rgba(255, 255, 255, 0.2) ;
+    color: white;
+}
+
+.hamburger{
+    z-index: 5;
+    display: none;
+    cursor: pointer; 
+}
+
+.hamburger img{
+    width: 25px;
+}
+
+/* responsive code */
+
+@media screen and (max-width: 1096px) {
+
+    a{
+        font-size: 1.5rem;
+    }
+
+
+    .title{
+        font-size: 3.5rem;
+    }
+
+    .desc{
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .btn{
+        padding: 1rem 1.3rem;
+        font-size: 1.7rem;
+    }
+
+    .btn p{
+        margin-left: .5rem;
+    }
+
+    .circle_bottom{
+        width: 30%;
+    }
+
+  }
+
+  @media screen and (max-width: 697px){
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .desc{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .btn{
+        padding: .8rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .btn img{
+        width: 15px;
+    }
+
+    .btn p{
+        margin-left: .2rem;
+    }
+
+    .circle_bottom{
+        width: 40%;
+    }
+  }
+
+  @media screen and (max-width: 612px){
+    .hero {
+       flex-direction: column;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .desc{
+        width: 60%;
+        text-align: center;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn{
+        margin: auto;
+    }
+    .right img{
+        width: 70%;
+        display: block;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    .circle_bottom{
+        display: none;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .overlay{
+        z-index: 3;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+  }
+
+  @media screen and (max-width: 390px){
+      .desc{
+          width: 100%;
+      }
+
+      .title{
+          font-size: 2.5rem;
+
+      }
+
+      .right img{
+          width: 90%;
+      }
+  }
+
+  .transform_toggle{
+    transform: translateX(0%);
+  }

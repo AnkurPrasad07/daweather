@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Weather</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="asset/logo_app.svg" alt="logo">
+        </div>
+
+        <div class="links">
+            <ul>
+                <li class="active"><a href="/" class="active_link">Home</a></li>
+                <li><a href="/weather">Weather</a></li>
+                <li><a href="/about">About me</a></li>
+            </ul>
+        </div>
+
+        <div class="hamburger">
+            <img src="asset/home/hamburger.svg" alt="hamburger and cross">
+        </div>
+
+        <div class="overlay">
+
+            <ul>
+                <li class="active"><a href="/" class="active_link">Home</a></li>
+                <li><a href="/weather">Weather</a></li>
+                <li><a href="/about">About me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <section class="hero">
+        <div class="left">
+            <h1 class="title"><span>Get the Latest </span> <span>Weather info of</span> <span>your city</span></h1>
+
+            <p class="desc">Lörem ipsum hypons onade intrar tills negt. Terad semiligt digital-tv</p>
+
+            {{>btn}}
+
+            <img src="asset/circle_bottom.svg" alt="" class="circle_bottom">
+
+
+        </div>
+
+        <div class="right">
+            <img src="asset/home/hero-left.svg" alt="weather-img" class="featured-img">
+        </div>
+    </section>
+
+
+
+    <!-- javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

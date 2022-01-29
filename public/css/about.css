@@ -1,0 +1,46 @@
+.box-right_about{
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    background-color: #3A3C3E;
+    z-index: -2;
+}
+.featured-img{
+    position: relative;
+    z-index: -1;
+}
+.right .arrow{
+    margin-top: -60%;
+}
+
+
+
+
+@media screen and (max-width: 1096px){
+    .box-right_about{
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+@media screen and (max-width: 1096px){
+    .box-right_about{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 612px){
+    .right .arrow{
+        width: 20px;
+        margin-left: -1%;
+    }
+
+    .title span{
+        display: inherit;
+    }
+}
+
+
