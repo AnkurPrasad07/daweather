@@ -201,6 +201,11 @@ footer{
     .weather{
         margin-right: 2rem;
         margin-left: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .text_weather{
+        margin-top: 5rem;
     }
 }
 
@@ -247,9 +252,6 @@ footer{
         text-align: center;
     }
 
-    
-    
-
     .more_info{
         background-color:#515254;
         padding: 2rem;
@@ -262,6 +264,7 @@ footer{
 
     .sunrise_sunset{
         width: 30rem;
+        height: 10rem;
     }
     
 }

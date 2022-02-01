@@ -69,6 +69,8 @@ const getInfo = async () =>{
                 weather_icon.src = "asset/weather_icon/haze.svg"
             }  else if(temp_mood ==="Smoke") {
                 weather_icon.src = "asset/weather_icon/smoke.svg"
+            } else if(temp_mood ==="Fog") {
+                weather_icon.src = "asset/weather_icon/fog.svg"
             } 
             
             else {
