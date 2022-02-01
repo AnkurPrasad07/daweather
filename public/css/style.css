@@ -196,6 +196,7 @@ nav{
 
     border-top-left-radius: var(--br_big);
     border-bottom-left-radius: var(--br_big);
+    transition: all .6s ;
 }
 
 .overlay ul {
@@ -364,6 +365,7 @@ nav{
 
   .transform_toggle{
     transform: translateX(0%);
+    transition: all .6s ;
   }
 
   html {
