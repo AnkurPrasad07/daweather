@@ -54,8 +54,8 @@ const getInfo = async () =>{
             temp.innerText = arrData[0].main.temp
             mood.innerText = arrData[0].weather[0].main
             city.innerText = arrData[0].name
-            pressure.innerText = arrData[0].main.pressure
-            humidity.innerText = arrData[0].main.humidity
+            pressure.innerText = `${arrData[0].wind.speed} m/s`
+            humidity.innerText = `${arrData[0].main.humidity}%`
 
             const temp_mood = arrData[0].weather[0].main
             // condition for checking the mood of the temp for icon

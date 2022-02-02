@@ -152,6 +152,11 @@ body{
     font-size: 1.8rem;
 }
 
+.first_info{
+    margin-bottom: .5rem;
+}
+
+
 .sunrise_sunset{
     height: 12.5rem;
     width: 45rem;
@@ -193,6 +198,10 @@ footer{
     
 }
 
+::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
 @media screen and (max-width: 726px){
     .text_weather .title::before{
         display: none;
@@ -231,7 +240,7 @@ footer{
 
     .left_box .weather_icon{
         margin: auto;
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-bottom: 1rem;
     }
 
@@ -256,8 +265,13 @@ footer{
         background-color:#515254;
         padding: 2rem;
         border-radius: var(--br_small);  
-        border: 1px solid rgba(255, 255, 255, 0.3);      
+        border: 1px solid rgba(255, 255, 255, 0.15s);      
     }
+
+    .first_info{
+        margin-bottom: 1rem;
+    }
+    
     .weather .city-input #city-name{
         font-size: 1.6rem;
     }
